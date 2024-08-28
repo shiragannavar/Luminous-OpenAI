@@ -31,7 +31,7 @@ set_llm_cache(
         collection_name="response_cache"
     )
 )
-client = OpenAI1(api_key='sk-proj-zVIR329MK69YTGMdoYcJT3BlbkFJ1VSmIKlFlcf13GHz7Yqf')
+client = OpenAI1(api_key=st.secrets['OPEN_API_KEY'])
 
 
 tz_india = pytz.timezone('Asia/Kolkata')
@@ -372,7 +372,7 @@ def load_retriever():
     ]
 
     document_content_description = "Inverter details to be recommended to the human where the human input should be between load_lower_range and load_higher_range"
-    llm = OpenAI(temperature=0, openai_api_key='sk-proj-zVIR329MK69YTGMdoYcJT3BlbkFJ1VSmIKlFlcf13GHz7Yqf')
+    llm = OpenAI(temperature=0, openai_api_key=st.secrets['OPEN_API_KEY'])
 
     retriever = SelfQueryRetriever.from_llm(
         llm, vector_store, document_content_description, metadata_field_info, verbose=True
