@@ -203,10 +203,6 @@ python-multipart==0.0.9
 pytz==2024.1
 PyYAML==6.0.1
 pyzmq==26.0.3
-ragstack-ai==1.0.8
-ragstack-ai-colbert==1.0.5
-ragstack-ai-langchain==1.1.0
-ragstack-ai-llamaindex==1.0.6
 rapidfuzz==3.9.4
 referencing==0.35.1
 regex==2024.5.15
